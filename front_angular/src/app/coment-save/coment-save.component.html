@@ -1,0 +1,16 @@
+<div class="container" style="background-color: rgb(231, 231, 231);">
+ <div style="text-align:center" >
+    <h1>Guardar Comentario</h1>
+  </div>
+  <form [formGroup]="comentForm" (ngSubmit)="guardarComentario()" novalidate>
+    <div class="mb-3">
+      <label for="id" class="form-label">Id:</label>
+      <input type="text" id="id" formControlName="id" required  class="form-control">
+    </div>
+    <div class="mb-3">
+      <label for="comentario" class="form-label">Comentario:</label>
+      <textarea id="comentario" formControlName ="comentario" required class="form-control"></textarea>
+    </div>
+    <button mat-stroked-button color="primary" style="width: 100%;">Gurdar</button>
+  </form>
+</div>

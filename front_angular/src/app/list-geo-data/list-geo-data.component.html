@@ -1,0 +1,56 @@
+<div class="row">
+    
+</div>
+<div class="row" style="background-color: rgb(228, 228, 228);">
+   
+    <div class="col-6">
+        <h2>Seleccione el Filtro</h2>
+    </div>
+    <div class="col-6">
+        <mat-selection-list #shoes (selectionChange)="onSelection($event, shoes.selectedOptions)">
+            @for (shoe of typesOfShoes; track shoe) {
+            <mat-list-option>{{shoe}}</mat-list-option>
+            }
+        </mat-selection-list>
+    </div>
+
+</div>
+<div class="row">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+       
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID. </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+      
+      
+        <ng-container matColumnDef="IDExternal">
+          <th mat-header-cell *matHeaderCellDef> ID Externo </th>
+          <td mat-cell *matCellDef="let element"> {{element.attributes.external_id}} </td>
+        </ng-container>
+      
+     
+        <ng-container matColumnDef="Type">
+          <th mat-header-cell *matHeaderCellDef> Tipo </th>
+          <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+        </ng-container>
+      
+        
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef> title </th>
+          <td mat-cell *matCellDef="let element"> {{element.attributes.title}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+</div>
+<div class="row">
+    <mat-paginator [length]="total_pages"
+              [pageSize]="per_page"
+              [pageSizeOptions]="[5, 10, 25, 50, 100, 200, 500, 1000]"
+              aria-label="Select page"
+              (page)="selectPage($event) ">
+    </mat-paginator>
+</div>

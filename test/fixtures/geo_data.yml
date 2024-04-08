@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 
+  id_geo: MyText
+  magnitude: MyString
+  place: MyString
+  time: 2024-04-08 11:05:31
+  url: MyText
+  tsumami: 1
+  magnitude_type: MyString
+  title: MyText
+  longitude: MyString
+  latitude: MyString
+
+two:
+  id: 
+  id_geo: MyText
+  magnitude: MyString
+  place: MyString
+  time: 2024-04-08 11:05:31
+  url: MyText
+  tsumami: 1
+  magnitude_type: MyString
+  title: MyText
+  longitude: MyString
+  latitude: MyString

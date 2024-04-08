@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row" style="margin: 0, auto; text-align: center;">
+    <h1>Selecciona una opcion</h1>
+  </div>
+  <div class="row" style="margin: 0, auto; text-align: center;">
+    <div class="col-6" >
+      <mat-card>
+        <mat-card-header ><h4>Datos</h4> </mat-card-header>
+        <mat-card-content><button mat-flat-button color="primary" style="width: 100%;" (click)="onclickMenu(1)">Ver</button></mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-6">
+      <mat-card>
+        <mat-card-header><h4>Hacer Comentarios</h4></mat-card-header>
+        <mat-card-content><button mat-flat-button color="accent" style="width: 100%;" (click)="onclickMenu(2)">Comenzar</button></mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<router-outlet />

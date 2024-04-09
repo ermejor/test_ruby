@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+install ruby
 
-Things you may want to cover:
+* bundle install
 
-* Ruby version
+* rails db:create 
 
-* System dependencies
+* rails db:migrate
 
-* Configuration
+execute task
 
-* Database creation
+* rake add_geo_data:find_data
 
-* Database initialization
+install front angular (in follder front_angular)
 
-* How to run the test suite
+* npm install
 
-* Services (job queues, cache servers, search engines, etc.)
+* npm run start
 
-* Deployment instructions
+Database is sqllite in storage
 
-* ...
+note :
+modify cors rule ruby for your domain
